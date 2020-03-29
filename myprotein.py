@@ -49,8 +49,9 @@ clicknext=1
 
 plist=driver.find_elements_by_class_name("athenaProductBlock_productName")
 
-for product in plist[::10]:
-    print(product.text)
+#for product in plist[::10]:
+for product in plist:
+    print('PRODUCTNAME= ', product.text)
     ActionChains(driver).key_down(Keys.CONTROL).click(product).key_up(Keys.CONTROL).perform()
     driver.switch_to_window(driver.window_handles[2])
     try:
@@ -67,13 +68,13 @@ for product in plist[::10]:
     serving_info=info.find_elements_by_xpath(".//p")
     nutritional_info=info.find_elements_by_xpath(".//table")
 
-    print(serving_info[0].get_attribute('textContent'))
-    print(serving_info[1].get_attribute('textContent'))
+    print("SERVINGINFO1= ",serving_info[0].get_attribute('textContent'))
+    print("SERVINGINFO2= ",serving_info[1].get_attribute('textContent'))
 
     for line in nutritional_info:
         a= line.tag_name
         info=line.get_attribute('textContent').strip().split()
-        print(info)
+        print("NUTINFO= ",info)
         #print(line.get_attribute('textContent'))
     driver.close()
     driver.switch_to_window(driver.window_handles[1])
@@ -83,5 +84,4 @@ for product in plist[::10]:
 #driver.find_element_by_xpath("""//*[@id="mainContent"]/div/div[1]/main/div[4]/nav/ul/li[3]/a""").click()
 
 
-#driver.quit()
-#a=dir(info[0])
+driver.quit()
