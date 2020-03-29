@@ -14,13 +14,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding = 'utf-8')
 path ="C:\\Users\\jeong\\Documents\\github\\chromedriver.exe"
 driver=webdriver.Chrome(path)
 driver.get("https://www.myprotein.co.kr/nutrition.list")
-try:
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CLASS_NAME , """epopupClose js-popup-close-btn internationalOverlay_CloseButton"""))
-    )
-    ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-except:
-    pass
+
 
 #get product categories
 protein=""" //*[@id="mainContent"]/div[3]/div/div[1]/a/div/h3 """
@@ -34,7 +28,7 @@ categories=[protein, food, vitamin, amino, prepostworkout]
 #for (i:category)
 #see products list on a new tab
 for category_element in categories:
-
+    category_element=categories[1]
     category=driver.find_element_by_xpath(category_element)
 
 
@@ -79,18 +73,22 @@ for category_element in categories:
             info = driver.find_element_by_xpath("""//*[@id="product-description-content-8"]/div/div""")
             # //*[@id="product-description-content-lg-8"]/div/div
             serving_info=info.find_elements_by_xpath(".//p")
-            nutritional_info=info.find_elements_by_xpath(".//table")
+            nutritional_info=info.find_elements_by_xpath(""".//table[not(ancestor::td)]""")
+
             if len(serving_info)==1:
                 print("SERVINGINFO1= ",serving_info[0].get_attribute('textContent'))
             else:
                 print("SERVINGINFO1= ",serving_info[0].get_attribute('textContent'))
                 print("SERVINGINFO2= ",serving_info[1].get_attribute('textContent'))
+            for table in nutritional_info:
+                nut_info_text = table.find_elements_by_xpath(""".//td[not(child::table)]""")
+                temp=[]
+                for line in nut_info_text:
+                    info=line.get_attribute('textContent').strip().split()
+                    temp.append(info)
+                    #print(line.get_attribute('textContent'))
+                print("NUTINFO= ", temp)
 
-            for line in nutritional_info:
-                a= line.tag_name
-                info=line.get_attribute('textContent').strip().split()
-                print("NUTINFO= ",info)
-                #print(line.get_attribute('textContent'))
             driver.close()
             driver.switch_to_window(driver.window_handles[1])
 
@@ -120,6 +118,6 @@ for category_element in categories:
     #pagenumblock=driver.find_element_by_xpath("""//*[@id="mainContent"]/div/div[1]/main/div[4]/nav""")
     #driver.find_element_by_xpath("""//*[@id="mainContent"]/div/div[1]/main/div[4]/nav/ul/li[3]/a""").click()
 
-
+    break
     #driver.quit()
     #a=dir(info[0])

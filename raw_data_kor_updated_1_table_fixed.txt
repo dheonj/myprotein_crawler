@@ -1,0 +1,17 @@
+﻿PRODUCTNAME=  오븐에 구운 프로틴 쿠키 (샘플)
+SERVINGINFO1=  Serving Size - 1 Baked Cookie (75g)
+NUTINFO=  ['Per', '100g', 'Per', '75g', 'Energy', '1507', 'kJ/360', 'kcal', '1130', 'kJ/270', 'kcal', 'Fat', '10.5', 'g', '7.9', 'g', 'of', 'which', 'saturates', '4g', '3g', 'Carbohydrates', '44.4', 'g', '33.3', 'g', 'of', 'which', 'sugars', '22.6g', '17', 'g', 'Fibre', '7', 'g', '5.3', 'g', 'Protein', '18.5', 'g', '13.9', 'g', 'Salt', '0.9', 'g', '0.68', 'g']
+NUTINFO=  ['of', 'which', 'saturates']
+NUTINFO=  ['of', 'which', 'sugars']
+
+PRODUCTNAME=  오븐에 구운 프로틴 쿠키 (샘플)
+SERVINGINFO1=  Serving Size - 1 Baked Cookie (75g)
+NUTINFO=  ['Per', '100g', 'Per', '75g', 'Energy', '1507', 'kJ/360', 'kcal', '1130', 'kJ/270', 'kcal', 'Fat', '10.5', 'g', '7.9', 'g', 'of', 'which', 'saturates', '4g', '3g', 'Carbohydrates', '44.4', 'g', '33.3', 'g', 'of', 'which', 'sugars', '22.6g', '17', 'g', 'Fibre', '7', 'g', '5.3', 'g', 'Protein', '18.5', 'g', '13.9', 'g', 'Salt', '0.9', 'g', '0.68', 'g']
+
+PRODUCTNAME=  오븐에 구운 프로틴 쿠키 (샘플)
+SERVINGINFO1=  Serving Size - 1 Baked Cookie (75g)
+NUTINFO=  [[], ['Per', '100g'], ['Per', '75g'], ['Energy'], ['1507', 'kJ/360', 'kcal'], ['1130', 'kJ/270', 'kcal'], ['Fat'], ['10.5', 'g'], ['7.9', 'g'], ['of', 'which', 'saturates'], ['of', 'which', 'saturates'], ['4g'], ['3g'], [], ['Carbohydrates'], ['44.4', 'g'], ['33.3', 'g'], ['of', 'which', 'sugars'], ['of', 'which', 'sugars'], ['22.6g'], ['17', 'g'], [], ['Fibre'], ['7', 'g'], ['5.3', 'g'], ['Protein'], ['18.5', 'g'], ['13.9', 'g'], ['Salt'], ['0.9', 'g'], ['0.68', 'g']]
+
+PRODUCTNAME=  오븐에 구운 프로틴 쿠키 (샘플)
+SERVINGINFO1=  Serving Size - 1 Baked Cookie (75g)
+NUTINFO=  [[], ['Per', '100g'], ['Per', '75g'], ['Energy'], ['1507', 'kJ/360', 'kcal'], ['1130', 'kJ/270', 'kcal'], ['Fat'], ['10.5', 'g'], ['7.9', 'g'], ['of', 'which', 'saturates'], ['4g'], ['3g'], [], ['Carbohydrates'], ['44.4', 'g'], ['33.3', 'g'], ['of', 'which', 'sugars'], ['22.6g'], ['17', 'g'], [], ['Fibre'], ['7', 'g'], ['5.3', 'g'], ['Protein'], ['18.5', 'g'], ['13.9', 'g'], ['Salt'], ['0.9', 'g'], ['0.68', 'g']]
